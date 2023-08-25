@@ -9,7 +9,8 @@ const cesta = {
         logofamily: logo,
         nomeFazenda: 'Produtos Theo',
         descricao: 'Ouviste falar nos produtos Theo Nunca teve a oportunidade? Não tema, pois os produtos Theo possuem uma qualidade incomparável, confira!',
-        preco: 'R$ 40,00'
+        preco: 'R$ 40,00',
+        compras: 'Comprar',
     }
 }
 
