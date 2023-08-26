@@ -18,11 +18,12 @@ export default function Details({nome,logofamily,nomeFazenda,descricao,preco,com
         onPress={() => Alert.alert('Button Pressionado!')}
         style={({pressed}) => [ 
             {
-                backgroundColor: pressed ? 'blue' : 'red',
-            }
+                backgroundColor: pressed ? '#2A9F40' : '#2A9F85',
+            },
+            estilos.botao
         ]}
         >
-            <Texto style={estilos.botao}>{compras}</Texto>
+            <Texto style={estilos.texto_botao}>{compras}</Texto>
         </Pressable>
     </>
 }
@@ -67,12 +68,15 @@ const estilos = StyleSheet.create({
         textAlign: 'left'
     },
     botao: { 
-        borderRadius: 8, 
-        padding: 6, 
-        height: 50, 
-        width: '70%', 
-        justifyContent: 'center', 
-        alignItems: 'center', 
-        elevation: 5, 
+        marginTop: 16,
+        paddingVertical: 16,
+        borderRadius: 6,
     },
+    texto_botao: {
+        textAlign: 'center', 
+        color: 'white',
+        fontSize: 16.5,
+        lineHeight: 23,
+        fontWeight: 'bold'
+    }
 })
