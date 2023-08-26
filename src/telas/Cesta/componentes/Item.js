@@ -1,35 +1,22 @@
 import React from 'react';
-import {View, Image, ScrollView, StyleSheet} from 'react-native';
+import {View, Image, ScrollView, StyleSheet, FlatList} from 'react-native';
 import Texto from '../../../componentes/texto';
 
-export default function Itens({titulo, lista}) {
-    return <>
-    <Texto style={styler.titulo}> {titulo} </Texto>
-    {lista.map(({nome,imagem}) => {
-    return <View key={nome} style={styler.item}>
+export default function Item({ item: {nome, imagem} }) {
+    return <View style={styler.item}>
         <Image source={imagem} style={styler.imagem}/>
         <Texto style={styler.nome}>{ nome }</Texto>
-        </View>
-    })}
-    </>
+    </View>
 }
 
 
 const styler = StyleSheet.create({
-    titulo:  {
-        color: '#464646',
-        fontWeight: 'bold',
-        marginTop: 32,
-        marginBottom: 8,
-        fontSize: 20,
-        lineHeight: 32,
-        textAlign: 'left'
-    },
     item: {
         flexDirection: 'row',
         borderBottomWidth: 1,
         borderBottomColor: '#ECECEC',
-        paddingVertical:16,
+        paddingVertical: 16,
+        marginHorizontal: 16,
         alignItems: 'center'
     },
     imagem: {

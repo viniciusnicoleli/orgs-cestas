@@ -1,5 +1,5 @@
 // import { StatusBar } from 'expo-status-bar';
-import {StatusBarStyleSheet, Text, View, StatusBar } from 'react-native';
+import {StatusBarStyleSheet, Text, View, StatusBar,SafeAreaView } from 'react-native';
 import Cesta from './src/telas/Cesta';
 import { useFonts, Montserrat_400Regular, Montserrat_700Bold } from '@expo-google-fonts/montserrat';
 import * as SplashScreen from 'expo-splash-screen';
@@ -21,9 +21,9 @@ export default function App() {
   }
 
   return (
-    <View>
+    <SafeAreaView style={{flex: 1}}>
       <StatusBar />
       <Cesta {...mock}/>
-    </View>
+    </SafeAreaView>
   );
 }
